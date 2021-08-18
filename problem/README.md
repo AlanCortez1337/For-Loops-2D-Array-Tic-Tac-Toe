@@ -1,8 +1,52 @@
-# Problem Title
-Problem description and instructions.
+# For Loops in 2D Array: Tic-Tac-Toe
+## Goal
+We have provided the core of the program, you are actually able to compile it and run it to play the game. However, as you might notice the game does not end if a player has a vertical, horizontal, or diagonal streak. Today your goal will be to navigate through a two-dimensional vector in order to see if a player has won vertically, horizontally, or diagonally.
 
-## Compiling and running the program
-Provide instructions to compile or run the program. A template is provided below.
+[main.cc], [game.h] are already completed, you will be completing the function [PlayerWonCheck] in [game.cc].
+## Refresher on 2D Vectors
+Before continuing it is a good idea to get a refresher how a two-dimensional vector or in this example a grid will look.
+
+In a traditional one-dimensional vector, we are able to get the value at the current index by using [] and inputting an integer inside signifying its location.
+An example:
+```
+#include <iostream>
+#include <vector>
+
+int main(){
+  std::vector<int> 1dVect = {1,2,3};
+
+  std::cout << "The value at the first index is: " << 1dVect[0] << std::endl;
+  return 0;
+}
+```
+This would return:
+```
+The value at the first index is: 1
+```
+Similarly if we were looking at a 2D vector, we would still use the first [] to signify location we are looking at. However, this time since we have a vector inside of a vector the first [] is telling the compiler which vector we are looking at. Then the second [] tells us which value inside of the second vector we want to return.
+An example:
+```
+#include <iostream>
+#include <vector>
+
+int main(){
+  std::vector<int> 2dVect = {{1,2,3}, {4,5,6}, {7,8,9}};
+
+  std::cout << "The first value in the second vector is: " << 2dVect[1][0] << std::endl;
+  std::cout << "The second value in the first vector is: " << 2dVect[0][1] << std::endl;
+  std::cout << "The third value in the third vector is: " << 2dVect[2][2] << std::endl;
+  return 0;
+}
+```
+These would return:
+```
+The first value in the second vector is: 4
+The second value in the first vector is: 2
+The third value in the third vector is: 9
+```
+## [game.cc]
+
+
 
 To manually test your code you can compile and run this program with:
 
