@@ -51,7 +51,7 @@ However, we can make this more readable by reordering the way it *visually* look
   {7,8,9}
 }
 ```
-Now, we are able to see a familiar 3x3 grid which a traditional Tic-Tac-Toe game is played on. In this format we can easily tell where a specific point is on the grid by calling a vector at \["x"]["y"]\ *(where x is left to right and y is top to bottom)* or \["rows"]["columns"]\. With that information, consider what might be a horizontal and vertical line on the 2D Vector using square brackets to see what a value is at a point.
+Now, we are able to see a familiar 3x3 grid which a traditional Tic-Tac-Toe game is played on. In this format we can easily tell where a specific point is on the grid by calling a vector at \["x"]["y"] *(where x is left to right and y is top to bottom)* or \["rows"]["columns"]\. With that information, consider what might be a horizontal and vertical line on the 2D Vector using square brackets to see what a value is at a point.
 Horizontal Example:
 ```
 {
