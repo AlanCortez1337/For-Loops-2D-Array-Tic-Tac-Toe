@@ -1,12 +1,12 @@
 # For Loops in 2D Array: Tic-Tac-Toe
 ## Goal
-We have provided the bulk of the program, you are actually able to compile it and run it to play the game. However, as you might notice the game does not end if a player has a vertical, horizontal, or diagonal streak. Today your goal will be to navigate through a two-dimensional vector in order to see if a player has won vertically, horizontally, or diagonally.
+We have provided the bulk of the program, you are able to compile it and run it to play the game. However, as you might notice the game does not end if a player has a vertical, horizontal, or diagonal streak. Today your goal will be to navigate through a two-dimensional vector in order to see if a player has won vertically, horizontally, or diagonally.
 
-Feel free to browse the finished code in ``main.cc`` and ``game.h`` but what you will be completing is the function: *PlayerWonCheck* in ``game.cc``.
+Feel free to browse the finished code in ``main.cc`` and ``game.h``, what you will be completing is the function: *PlayerWonCheck* in ``game.cc``.
 ## Refresher on 2D vectors
-Before continuing it is a good idea to get a refresher how a two-dimensional vector works.
+Before continuing it is a good idea to get a refresher on how a two-dimensional vector works.
 
-The difference between a one-dimensional and a two-dimensional vector is how many "[]" you put after the variables name. For a 2D vector the first square bracket would tell the compiler which sub-vector inside the main vector we should be viewing. While the second square bracket is meant to look at the data inside of the current sub-vector.
+For a 2D vector the first square bracket would tell the compiler which sub-vector inside the main vector we should be viewing. While the second square bracket is meant to look at the data inside of the current sub-vector.
 
 For example:
 ```
@@ -22,14 +22,14 @@ int main(){
   return 0;
 }
 ```
-These would return:
+This would return:
 ```
 The first value in the second vector is: 4
 The second value in the first vector is: 2
 The third value in the third vector is: 9
 ```
 ## ``PlayerWonCheck`` details
-This function will be continuously called each time a player inputs their move in order to check if they won. ``PlayerWonCheck`` is a ``bool`` that should return **true** if a player has a streak or **false** if they have not won yet *(do no worry about a tie)*. As well as, a print statement saying a mix of the following, depending on the situation:
+This function will be continuously called each time a player inputs their move in order to check if they won. ``PlayerWonCheck`` is a ``bool`` that should return **true** if a player has a streak or **false** if they have not won yet *(do no worry about if there is a tie)*. As well as, a print statement saying a mix of the following:
 ```
 Player 1 has won horizontally!
 Player 2 has won vertically!
@@ -40,11 +40,9 @@ The function's parameters need to include *two things*: first a two-dimensional 
 To break this problem down further we are going to divide the following section into two parts:
 1. Horizontal and Vertical Streaks
 2. Diagonal Streaks
-  * Left to Right Streak
-  * Right to Left Streak
 
 ### Horizontal and vertical streaks
-Right now let us worry about how to find a ``Horizontal`` streak. When looking for this streak an obvious pattern you can see is that a horizontal streak is a straight line from left to right. But how does this translate to c++? Looking at the example 2D vector above it just shows a flat array of values: ``{{1,2,3}, {4,5,6}, {7,8,9}}``.
+Right now let us worry about how to find a ``Horizontal`` streak. When looking for this streak an obvious conclusion is that a horizontal streak is a straight line from left to right or vice versa. But how does this translate to c++? Looking at the example 2D vector above it just shows a flat array of values: ``{{1,2,3}, {4,5,6}, {7,8,9}}``.
 However, we can make this more readable by reordering the way it visually looks, for example:
 ```
 {
@@ -53,9 +51,9 @@ However, we can make this more readable by reordering the way it visually looks,
   {7,8,9}
 }
 ```
-Now, we are able to see a familiar 3x3 grid which a traditional Tic-Tac-Toe game is played on. This is where we can easily tell where a specific point is on the grid by calling a vector at \["x"]["y"]\ *(where x is left to right and y is top to bottom)* or \["rows"]["columns"]\. With that information, consider what might be considered as a horizontal and vertical line on the 2D Vector. After that, remember to print the winning streak, the current player who won, and return true to make the program work properly.
+Now, we are able to see a familiar 3x3 grid which a traditional Tic-Tac-Toe game is played on. This is where we can easily tell where a specific point is on the grid by calling a vector at \["x"]["y"]\ *(where x is left to right and y is top to bottom)* or \["rows"]["columns"]\. With that information, consider what might be considered as a horizontal and vertical line on the 2D Vector. After that, remember to print the current player who won, the winning streak, and return true to make the program work properly.
 ### Diagonal streaks
-Understanding how we could find a horizontal or vertical streak, a diagonal will be a tad easier to understand. This can really just be condensed to check the opposite corners and the middle to see if a player has a winning streak.
+Understanding how we found a horizontal or vertical streak, a diagonal will be a tad easier to understand. This can really just be condensed to check the opposite corners and the middle to see if a player has a winning streak.
 For example:
 ```
 {
@@ -64,7 +62,10 @@ For example:
   {_,_,X}        _ _ X
 }
 ```
-
+This would just print the statement:
+```
+Player 1 has won diagonally!
+```
 ## Run the program
 
 To manually test your code you can compile and run this program with:
