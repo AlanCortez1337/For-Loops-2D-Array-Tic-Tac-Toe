@@ -42,8 +42,8 @@ To break this problem down further we are going to divide the following section 
 2. Diagonal Streaks
 
 ### Horizontal and vertical streaks
-Right now let us worry about how to find a ``Horizontal`` streak. When looking for this streak an obvious conclusion is that a horizontal streak is a straight line from left to right or vice versa. But how does this translate to c++? Looking at the example 2D vector above it just shows a flat array of values: ``{{1,2,3}, {4,5,6}, {7,8,9}}``.
-However, we can make this more readable by reordering the way it visually looks, for example:
+Right now let us worry about how to find a ``Horizontal`` streak. When looking for this streak an obvious conclusion is that a horizontal streak is a straight line from left to right or vice versa. But how does this translate to c++? Looking at the example 2D vector above, it just shows a fairly unreadable array of values for us: ``{{1,2,3}, {4,5,6}, {7,8,9}}``.
+However, we can make this more readable by reordering the way it *visually* looks, for example:
 ```
 {
   {1,2,3},
@@ -51,18 +51,35 @@ However, we can make this more readable by reordering the way it visually looks,
   {7,8,9}
 }
 ```
-Now, we are able to see a familiar 3x3 grid which a traditional Tic-Tac-Toe game is played on. This is where we can easily tell where a specific point is on the grid by calling a vector at \["x"]["y"]\ *(where x is left to right and y is top to bottom)* or \["rows"]["columns"]\. With that information, consider what might be considered as a horizontal and vertical line on the 2D Vector. After that, remember to print the current player who won, the winning streak, and return true to make the program work properly.
+Now, we are able to see a familiar 3x3 grid which a traditional Tic-Tac-Toe game is played on. In this format we can easily tell where a specific point is on the grid by calling a vector at \["x"]["y"]\ *(where x is left to right and y is top to bottom)* or \["rows"]["columns"]\. With that information, consider what might be a horizontal and vertical line on the 2D Vector using square brackets to see what a value is at a point.
+Horizontal Example:
+```
+{
+  {X,X,X},       X X X
+  {O,O,_},  or   O O _
+  {_,_,_}        _ _ _
+}
+```
+Vertical Example:
+```
+{
+  {X,O,O},       X O O
+  {X,_,_},  or   X _ _
+  {X,_,_}        X _ _
+}
+```
+After that, remember to print the current player who won, the winning streak, and return true to make the program work properly.
 ### Diagonal streaks
 Understanding how we found a horizontal or vertical streak, a diagonal will be a tad easier to understand. This can really just be condensed to check the opposite corners and the middle to see if a player has a winning streak.
 For example:
 ```
 {
   {X,O,O},       X O O
-  {_,X,O},  or   _ X O
+  {_,X,_},  or   _ X _
   {_,_,X}        _ _ X
 }
 ```
-This would just print the statement:
+This should print the statement:
 ```
 Player 1 has won diagonally!
 ```
