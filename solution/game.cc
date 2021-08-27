@@ -13,25 +13,27 @@ bool PlayerWonCheck(std::vector<std::vector<std::string>> grid, int player) {
         grid[index][0] != "_") {
       std::cout << "Player " << player << " has won horizontally!" << std::endl;
       return true;
-      // similar to how we did horizontal but this time reversed because we are
-      // checking if there are any vertical streaks
+      // Similar to how we did horizontal streaks, we are making index be the
+      // what we are sifting through in the 2D vector. This time being columns
+      // because we need to check if each column has a vertical streak.
     } else if (grid[0][index] == grid[1][index] &&
                grid[1][index] == grid[2][index] && grid[0][index] != "_") {
       std::cout << "Player " << player << " has won vertically!" << std::endl;
       return true;
     }
   }
-  // Diagonals are a bit more "brute force" in the sense that we dont need any
-  // loop to check if "a = b, b = c, a = c". What we do for the left to right
-  // diagonal is that we can just start at [0,0] and check middle with the
-  // opposite corners
+  // Diagonals are a bit more "brute force" in the sense that we dont need to
+  // loop to check if there is a vertical streak. While there may be a way to do
+  // so, what we do for the left to right diagonal is that we can start at [0,0]
+  // and check middle with the opposite corner to see if they have the same
+  // value.
   if (grid[0][0] == grid[1][1] && grid[1][1] == grid[2][2] &&
       grid[1][1] != "_") {
     std::cout << "Player " << player << " has won diagonally!" << std::endl;
     return true;
     // Similar to the previous diagonal we are still looking at the
-    // center point (1,1). However, this time the corners are flipped since that
-    // is visually and mechanically a right to left diagonal streak
+    // center point (1,1). However, this time the corners are flipped because
+    // visually that would look like a right to left diagonal streak
   } else if (grid[0][2] == grid[1][1] && grid[1][1] == grid[2][0] &&
              grid[1][1] != "_") {
     std::cout << "Player " << player << " has won diagonally!" << std::endl;
@@ -53,9 +55,9 @@ void PlayerInput(std::vector<std::vector<std::string>> &grid,
     if (moves.find(input) != moves.end()) {
       // we have to make this true in order to break out of the do-while loop
       passed = true;
-      // These are to store the values from the map which are coordinates on the
-      // grid. In other words, the values is a vector where the value at [0] is
-      // x and [1] is y
+      // These are to store the values from the map, which are coordinates on
+      // the grid. In other words, the values of the map is a vector where the
+      // value at [0] is x and [1] is y
       x = moves[input][0];
       y = moves[input][1];
       // The following is to delete the key from the map and the

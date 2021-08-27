@@ -17,8 +17,8 @@ int main() {
   // This vector is mainly used as an easy way to print out the possible moves
   std::vector<std::string> moveOptions = {"TL", "TM", "TR", "ML", "MM",
                                           "MR", "BL", "BM", "BR"};
-  // The following is our 2d array which will be used to navigate. Another way
-  // of looking at this is:
+  // The following is our 2d array which will be used to navigate through.
+  // Another way of looking at this is:
   // {"_", "_", "_"}
   // {"_", "_", "_"}
   // {"_", "_", "_"}
@@ -45,7 +45,7 @@ int main() {
     Display(game_board, moveOptions, 1);
     std::cout << "Player " << player << " input: ";
     std::cin >> input;
-    // Then this function would be where we use the new player input and change
+    // Then this function would be where we use the new player input to change
     // how the grid will look in the background
     PlayerInput(game_board, playerMoves, moveOptions, input, player);
     // These will be our break conditionals because without them we would
