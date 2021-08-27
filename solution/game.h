@@ -8,9 +8,8 @@
 // This functions purpose is to check if any player has won vertically,
 // horizontally, or diagonally
 bool PlayerWonCheck(std::vector<std::vector<std::string>> grid, int player);
-// This function uses the input of the current player so that the function can
-// delete that option for future play and override the "_" at the appropriate
-// spot
+// This function uses the input of the current player so that it can delete that
+// option for future play and override the "_" at the appropriate spot
 void PlayerInput(std::vector<std::vector<std::string>> &grid,
                  std::map<std::string, std::vector<int>> &moves,
                  std::vector<std::string> &playerOptions, std::string input,

@@ -7,7 +7,7 @@ bool PlayerWonCheck(std::vector<std::vector<std::string>> grid, int player) {
   // advantage of and use a for loop to alternate through each row and column
   // respectively
   for (int index = 0; index < grid.size(); index++) {
-    // since the first [] on grid is the "row" we can have index be the input
+    // Since the first [] on grid is the "row" we can have index be the input
     // because we are alternating through the rows for a horizontal streak
     if (grid[index][0] == grid[index][1] && grid[index][1] == grid[index][2] &&
         grid[index][0] != "_") {
@@ -53,7 +53,7 @@ void PlayerInput(std::vector<std::vector<std::string>> &grid,
   do {
     // This conditional is a fancy way in C++ to find if there is a key in a map
     if (moves.find(input) != moves.end()) {
-      // we have to make this true in order to break out of the do-while loop
+      // We have to make this true in order to break out of the do-while loop
       passed = true;
       // These are to store the values from the map, which are coordinates on
       // the grid. In other words, the values of the map is a vector where the
@@ -75,8 +75,7 @@ void PlayerInput(std::vector<std::vector<std::string>> &grid,
       std::cin >> input;
     }
   } while (!passed);
-  // This just overrides the "_" on the grid with the corresponding players move
-  // coordinates
+  // This just overrides the "_" on the grid with the corresponding players mark
   if (player == 1) {
     grid[x][y] = "X";
   } else {

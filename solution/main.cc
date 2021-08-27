@@ -8,7 +8,7 @@
 
 int main() {
   // Initialization:
-  // we are using a map because we want to attribute a move like "TL" to a
+  // We are using a map because we want to attribute a move like "TL" to a
   // coordinate on the 2d grid, in this case: [0,0]
   std::map<std::string, std::vector<int>> playerMoves = {
       {"TL", {0, 0}}, {"TM", {0, 1}}, {"TR", {0, 2}},
@@ -25,7 +25,7 @@ int main() {
   // where the top left is [0,0] and the bottom right is [2,2]
   std::vector<std::vector<std::string>> game_board = {
       {"_", "_", "_"}, {"_", "_", "_"}, {"_", "_", "_"}};
-  // other necessary variables we need to initialize to get the code working
+  // Other necessary variables we need to initialize to get the code working
   int player = 1;
   std::string input;
   int x, y;
