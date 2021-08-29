@@ -136,7 +136,7 @@ cd prob02
 Use the `clang++` command (or ``make build``) to compile your code and the `./` command to run it. The sample code below shows how you would compile code save in `main.cc` and into the executable file `main`. Make sure you use the correct filenames required in this problem.  Take note that if you make any changes to your code, you will need to compile it first before you see changes when running it.
 
 ```
-clang++ -std=c++17 main.cc cpputils/graphics/image.cc -o main -lm -lX11 -lpthread
+clang++ -std=c++17 main.cc game.cc -o main -lm -lX11 -lpthread
 ./main
 ```
 
