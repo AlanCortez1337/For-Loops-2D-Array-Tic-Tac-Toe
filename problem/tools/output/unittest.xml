@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="8" failures="0" disabled="0" errors="0" time="0.023" timestamp="2021-09-11T10:34:02" name="AllTests">
+  <testsuite name="TTT" tests="8" failures="0" disabled="0" errors="0" time="0.022" timestamp="2021-09-11T10:34:02">
+    <testcase name="BlankBoard" status="run" result="completed" time="0" timestamp="2021-09-11T10:34:02" classname="TTT" />
+    <testcase name="HorizontalStreak" status="run" result="completed" time="0" timestamp="2021-09-11T10:34:02" classname="TTT" />
+    <testcase name="VerticalStreak" status="run" result="completed" time="0" timestamp="2021-09-11T10:34:02" classname="TTT" />
+    <testcase name="LeftDiagonalStreak" status="run" result="completed" time="0.001" timestamp="2021-09-11T10:34:02" classname="TTT" />
+    <testcase name="RightDiagonalStreak" status="run" result="completed" time="0.003" timestamp="2021-09-11T10:34:02" classname="TTT" />
+    <testcase name="MixMatchStreaks" status="run" result="completed" time="0" timestamp="2021-09-11T10:34:02" classname="TTT" />
+    <testcase name="NoStreakTie" status="run" result="completed" time="0" timestamp="2021-09-11T10:34:02" classname="TTT" />
+    <testcase name="CorrectDisplay" status="run" result="completed" time="0.006" timestamp="2021-09-11T10:34:02" classname="TTT" />
+  </testsuite>
+</testsuites>
