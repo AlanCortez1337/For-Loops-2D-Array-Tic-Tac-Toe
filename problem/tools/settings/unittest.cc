@@ -131,21 +131,21 @@ TEST(TTT, MixMatchStreaks) {
   // mix-matched left to right diagonal streak check
   ASSERT_FALSE(PlayerWonCheck(mmLDStreak, 1))
       << "Make sure that your function only considers a diagonal streak "
-         "occurance when there is a \"left to right line\" composed of only "
-         "X's or O's, no mix matching is allowed.";
+         "occurance when there is a \"left to right diagonal line\" composed "
+         "of only X's or O's, no mix matching is allowed.";
   ASSERT_FALSE(PlayerWonCheck(mmLDStreak, 2))
       << "Make sure that your function only considers a diagonal streak "
-         "occurance when there is a \"left to right line\" composed of only "
-         "X's or O's, no mix matching is allowed.";
+         "occurance when there is a \"left to right diagonal line\" composed "
+         "of only X's or O's, no mix matching is allowed.";
   // mix-matched right to left diagonal streak check
   ASSERT_FALSE(PlayerWonCheck(mmRDStreak, 1))
       << "Make sure that your function only considers a diagonal streak "
-         "occurance when there is a \"right to left line\" composed of only "
-         "X's or O's, no mix matching is allowed.";
+         "occurance when there is a \"right to left diagonal line\" composed "
+         "of only X's or O's, no mix matching is allowed.";
   ASSERT_FALSE(PlayerWonCheck(mmRDStreak, 2))
       << "Make sure that your function only considers a diagonal streak "
-         "occurance when there is a \"right to left line\" composed of only "
-         "X's or O's, no mix matching is allowed.";
+         "occurance when there is a \"right to left diagonal line\" composed "
+         "of only X's or O's, no mix matching is allowed.";
 }
 // This test is mainly to check if the programmer did not change anything
 // outside of PlayerWonCheck
