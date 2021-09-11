@@ -1,4 +1,4 @@
-# For Loops in 2D Array: Tic-Tac-Toe
+# For Loops in 2D Arrays: Tic-Tac-Toe
 ## Goal
 We have provided the bulk of the program, you are able to compile it and run it to play the game. However, as you might notice the game does not end if a player has a vertical, horizontal, or diagonal streak. Today your goal will be to navigate through a two-dimensional vector in order to see if a player has won vertically, horizontally, or diagonally.
 
