@@ -81,7 +81,7 @@ This should print the statement:
 ```
 Player 1 has won diagonally!
 ```
-As you can see the top left, middle and its opposite corner are the same players icons. Apply that information when coding, and consider that for the two possible types of diagonal streaks.
+As you can see the top left, middle and its opposite corner are **all** "X". Apply that information when coding, and consider that for the two possible types of diagonal streaks.
 ## Run the program
 
 To manually test your code you can compile and run this program with:
