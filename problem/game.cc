@@ -6,8 +6,8 @@ bool PlayerWonCheck(std::vector<std::vector<std::string>> grid, int player) {
   // TO DO:
   // 1. Implement a way to identify horizontal, vertical and diagonal streaks
   // using the two-dimensional vector "grid"
-  // 2. Print the current player and their streak on the console if applicable
-  // 3. Return True when a player has won any streak
+  // 2. Print the current player and their winning streak on the console
+  // 3. Return true when a player has won any streak
   return false;
 }
 /*
