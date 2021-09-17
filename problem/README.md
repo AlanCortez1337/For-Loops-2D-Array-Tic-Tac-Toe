@@ -41,7 +41,8 @@ To break this problem down further we are going to divide the following section 
 2. Diagonal Streaks
 
 ### Horizontal and Vertical Streaks
-Right now let us worry about how to find a ``Horizontal`` streak. When looking for this streak an observation is that a horizontal streak is a straight line from left to right or vice versa. But how does this translate to C++? Looking at the example 2D vector above, we know the values of the vector as: ``{{1,2,3}, {4,5,6}, {7,8,9}}``. However, we can make this more readable by reordering the way it *visually* looks, for example:
+Right now let us worry about how to find a ``Horizontal`` streak. When looking for this streak an observation is that a horizontal streak is a straight line from left to right or vice versa. But how does this translate to C++? Looking at the example 2D vector above, we know the values of the vector as: ``{{1,2,3}, {4,5,6}, {7,8,9}}``. However, we can make this more readable by reordering the way it *visually* looks,
+for example:
 ```
 {
   {1,2,3},
@@ -49,7 +50,7 @@ Right now let us worry about how to find a ``Horizontal`` streak. When looking f
   {7,8,9}
 }
 ```
-Now, we are able to see a familiar 3x3 grid which a traditional Tic-Tac-Toe game is played on. In this format we can easily tell where a specific point is on the grid by calling a vector at \["x"]["y"] *(where x is top to bottom and y is left to right)* or \["rows"]["columns"]\. With that in mind, consider what might be a horizontal or vertical line and then consider how you would be able to alter between each row and column respecitvely to check.
+Now, we are able to see a familiar 3x3 grid which a traditional Tic-Tac-Toe game is played on. In this format we can easily tell where a specific point is on the grid by calling a vector at \["x"]["y"] *(where x is top to bottom and y is left to right)* or \["rows"]["columns"]\. With that in mind, consider what might be a horizontal or vertical line and how you would be able to alter between each row and column respecitvely to check.
 Horizontal Example:
 ```
 {
@@ -81,7 +82,7 @@ This should print the statement:
 ```
 Player 1 has won diagonally!
 ```
-As you can see the top left, middle and its opposite corner are **all** "X". Apply that information when coding, and consider that for the two possible types of diagonal streaks.
+As you can see the top left, middle and its opposite corner are **all** "X". Apply that information when coding, and consider that for the two possible types of diagonal streaks (left to right and right to left diagonal streaks).
 ## Run the program
 
 To manually test your code you can compile and run this program with:
