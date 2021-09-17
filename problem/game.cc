@@ -3,9 +3,10 @@
 #include <iostream>
 
 bool PlayerWonCheck(std::vector<std::vector<std::string>> grid, int player) {
-  // Implement your code here to identify what streak the current player won on
-  // the grid. 
-
+  // TO DO:
+  // 1. Implement a way to identify horizontal, vertical and diagonal streaks
+  // 2. Print the current player and their streak on the console if applicable
+  // 3. Return true when a player has won
   return false;
 }
 /*
