@@ -41,7 +41,7 @@ To break this problem down further we are going to divide the following section 
 2. Diagonal Streaks
 
 ### Horizontal and Vertical Streaks
-Right now let us worry about how to find a ``Horizontal`` streak. When looking for this streak an observation is that a horizontal streak is a straight line from left to right or vice versa. But how does this translate to c++? Looking at the example 2D vector above, we see the values of the vector as: ``{{1,2,3}, {4,5,6}, {7,8,9}}``. However, we can make this more readable by reordering the way it *visually* looks, for example:
+Right now let us worry about how to find a ``Horizontal`` streak. When looking for this streak an observation is that a horizontal streak is a straight line from left to right or vice versa. But how does this translate to C++? Looking at the example 2D vector above, we know the values of the vector as: ``{{1,2,3}, {4,5,6}, {7,8,9}}``. However, we can make this more readable by reordering the way it *visually* looks, for example:
 ```
 {
   {1,2,3},
