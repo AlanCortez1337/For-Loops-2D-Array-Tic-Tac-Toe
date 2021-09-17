@@ -1,4 +1,3 @@
-// # Solution file
 #include <iostream>
 #include <map>
 #include <string>
@@ -12,8 +11,8 @@
 */
 int main() {
   // Initialization:
-  // We are using a map because we want to attribute a move like "TL" to a
-  // coordinate on the 2d grid, in this case: [0,0]
+  // We are using a map because we want to attribute a move like "TL" or "Top
+  // Left" to a coordinate on the 2d grid, in this case: [0,0]
   std::map<std::string, std::vector<int>> playerMoves = {
       {"TL", {0, 0}}, {"TM", {0, 1}}, {"TR", {0, 2}},
       {"ML", {1, 0}}, {"MM", {1, 1}}, {"MR", {1, 2}},
@@ -40,32 +39,32 @@ int main() {
   std::cout << "For inputs: The first letter is the row and the second is the "
                "column.\n";
   std::cout << "EX: \"TL\" is Top Left\nHere is the Grid: \n";
-  // This will be our main loop to keep on running until the game is over,
-  // there are a handful of ways to do this but a while(true) loop would do the
-  // job with the proper break conditionals to get out of the infinite loop
+  // This will be our main loop to keep on running until the game is over
   while (true) {
-    // Fairly self explanitory, we call the display function to show an
-    // updated version of the game board, or the 2d array, on the console
+    // First time Display gets calls is to show the blank board and the possible
+    // moves. After the first time, calling this function will show an updated
+    // version of the game board and the possible moves the player can input
     Display(game_board, moveOptions, 1);
     std::cout << "Player " << player << " input: ";
     std::cin >> input;
-    // Then this function would be where we use the new player input to change
-    // how the grid will look in the background
+    // Then this function will be where we use the new player's input to change
+    // how the grid will look in the backend
     PlayerInput(game_board, playerMoves, moveOptions, input, player);
-    // These will be our break conditionals because without them we would
+    // The following will be our break statments because without them we would
     // just run infinitely and crash the program
-    // Here we have a conditional to check if any player has a winning streak
+    // Here we have a conditional to break out of the loop if any player has a
+    // winning streak
     if (PlayerWonCheck(game_board, player)) {
       Display(game_board, moveOptions, 0);
       break;
-      // Here is a conditional if the entire board is filled, in other words, "a
-      // tie".
+      // Here is a conditional to exit the loop if there is a tie or if there
+      // are no more moves to play
     } else if (moveOptions.size() == 0) {
       Display(game_board, moveOptions, 0);
       std::cout << "NO WINNERS: TIE" << std::endl;
       break;
     }
-    // These if statements are just to swap the current player once their turn
+    // These if statements are just to swap the player number once their turn
     // is over.
     if (player == 1) {
       player = 2;

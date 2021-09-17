@@ -19,7 +19,7 @@ void PlayerInput(std::vector<std::vector<std::string>> &grid,
                  std::map<std::string, std::vector<int>> &moves,
                  std::vector<std::string> &playerOptions, std::string input,
                  int player);
-// The functions core purpose is to display the updated rows, and the new
+// This functions core purpose is to display the updated rows, and the new
 // possible moves the next player can choose
 void Display(std::vector<std::vector<std::string>> grid,
              std::vector<std::string> possibleMoves, int canDisplay);
