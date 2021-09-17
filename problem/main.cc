@@ -50,10 +50,8 @@ int main() {
     // Then this function will be where we use the new player's input to change
     // how the grid will look in the backend
     PlayerInput(game_board, playerMoves, moveOptions, input, player);
-    // The following will be our break statments because without them we would
-    // just run infinitely and crash the program
     // Here we have a conditional to break out of the loop if any player has a
-    // winning streak
+    // winning streak so the loop won't run infinitely
     if (PlayerWonCheck(game_board, player)) {
       Display(game_board, moveOptions, 0);
       break;
